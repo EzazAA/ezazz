@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { createServerClient } from "@/lib/supabase"
 
 interface Message {
   id: number

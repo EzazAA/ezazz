@@ -62,7 +62,7 @@ export default function ContactSection() {
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <span className="text-gray-400 underline">Email:</span>
-                <span className="text-white ">ezazalamahmed@gmail.com</span>
+                <span className="text-white ">ezazalamahed</span>
               </div>
               <div className="flex items-center space-x-4">
                 <span className="text-gray-400 underline">Location:</span>
