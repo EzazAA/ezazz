@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Failed to save message" }, { status: 500 })
     }
 
-    return NextResponse.json({ message: "Message sent successfully", data }, { status: 200 })
+    return NextResponse.json(data, { status: 200 }) // ✅ Good, { status: 200 })
   } catch (error) {
     console.error("API error:", error)
     return NextResponse.json({ error: "Internal server error" }, { status: 500 })
