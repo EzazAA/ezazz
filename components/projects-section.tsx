@@ -7,7 +7,7 @@ export default function ProjectsSection() {
       description:
         "A frontend JS-based library management system for the administration, Add, delete books and view them",
       tech: ["HTML", "CSS", "Javascript"],
-      image: "https://ibb.co/G4rwYSzD",
+      image: "https://i.ibb.co/nNK2dJxy/lb.png",
       link: "https://your-librarianly-website.com",
       github: "https://github.com/yourusername/librarianly",
     },
@@ -16,7 +16,7 @@ export default function ProjectsSection() {
       description:
         "A website for a Clothware company selling high quality clothes, it supports ordering and contacting through Email.js",
       tech: ["Next.js", "Email.js", "TailwindCSS"],
-      image: "https://ibb.co/vxgNw8k5",
+      image: "https://i.ibb.co/WWqrx1f9/gw.png",
       link: "https://ghostwipers.com",
       github: "https://github.com/yourusername/ghostwipers",
     },
@@ -25,7 +25,7 @@ export default function ProjectsSection() {
       description:
         "An AI-powered agricultural assistant that provides farmers with real-time insights and recommendations to optimize crop yield and resource management.",
       tech: ["Python", "NGROK", "Expo.JS", "HTML-CSS-JS"],
-      image: "https://ibb.co/C3mzfwD0",
+      image: "https://i.ibb.co/Q3pf4Jtm/as.png",
       link: "https://agro-smart-app.com",
       github: "https://github.com/yourusername/agro-smart",
     },
