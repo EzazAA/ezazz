@@ -1,25 +1,33 @@
+import { ExternalLink, Github } from 'lucide-react'
+
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Librarianly",
       description:
-        "A full-stack e-commerce solution built with Next.js, featuring real-time inventory management and secure payment processing.",
-      tech: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-      image: "https://cdn.dribbble.com/userupload/17602905/file/original-cd3c8dc88998167865c605aa6d85c0ae.jpg?format=webp&resize=400x300&vertical=center",
+        "A frontend JS-based library management system for the administration, Add, delete books and view them",
+      tech: ["HTML", "CSS", "Javascript"],
+      image: "https://ibb.co/G4rwYSzD",
+      link: "https://your-librarianly-website.com",
+      github: "https://github.com/yourusername/librarianly",
     },
     {
-      title: "Task Management App",
+      title: "Ghostwipers website",
       description:
-        "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-      image: "https://cdn.dribbble.com/userupload/17602905/file/original-cd3c8dc88998167865c605aa6d85c0ae.jpg?format=webp&resize=400x300&vertical=center",
+        "A website for a Clothware company selling high quality clothes, it supports ordering and contacting through Email.js",
+      tech: ["Next.js", "Email.js", "TailwindCSS"],
+      image: "https://ibb.co/vxgNw8k5",
+      link: "https://ghostwipers.com",
+      github: "https://github.com/yourusername/ghostwipers",
     },
     {
-      title: "AI Content Generator",
+      title: "Agro-Smart",
       description:
-        "An AI-powered content creation platform that helps businesses generate marketing copy, blog posts, and social media content.",
-      tech: ["Python", "OpenAI API", "FastAPI", "React"],
-      image: "https://cdn.dribbble.com/userupload/17602905/file/original-cd3c8dc88998167865c605aa6d85c0ae.jpg?format=webp&resize=400x300&vertical=center",
+        "An AI-powered agricultural assistant that provides farmers with real-time insights and recommendations to optimize crop yield and resource management.",
+      tech: ["Python", "NGROK", "Expo.JS", "HTML-CSS-JS"],
+      image: "https://ibb.co/C3mzfwD0",
+      link: "https://agro-smart-app.com",
+      github: "https://github.com/yourusername/agro-smart",
     },
   ]
 
@@ -29,8 +37,8 @@ export default function ProjectsSection() {
         <h2 className="text-4xl md:text-5xl font-light text-white mb-12 text-center">Featured Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="border border-gray-700 hover:border-gray-500 transition-all duration-300 overflow-hidden">
+            <div key={index} className="group">
+              <div className="border border-gray-700 hover:border-gray-500 transition-all duration-300 overflow-hidden h-full flex flex-col">
                 <div className="h-48 bg-gray-800 overflow-hidden">
                   <img
                     src={project.image || "/placeholder.svg"}
@@ -38,15 +46,49 @@ export default function ProjectsSection() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">{project.description}</p>
+                  
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech, techIndex) => (
-                      <span key={techIndex} className="px-2 py-1 text-xs border border-gray-600 text-gray-400">
+                      <span 
+                        key={techIndex} 
+                        className="px-3 py-1 text-xs border border-gray-600 text-gray-400 rounded-sm hover:border-gray-400 transition-colors"
+                      >
                         {tech}
                       </span>
                     ))}
+                  </div>
+                  
+                  {/* Project Links - Better Formatted */}
+                  <div className="flex gap-3 mt-auto">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 group/btn relative overflow-hidden"
+                    >
+                      <div className="px-4 py-3 border border-white text-white text-center text-sm font-light tracking-wide hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center gap-2">
+                        <ExternalLink size={16} className="transition-transform group-hover/btn:scale-110" />
+                        <span>View Live</span>
+                      </div>
+                    </a>
+                    
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/btn relative overflow-hidden"
+                      >
+                        <div className="px-4 py-3 border border-gray-600 text-gray-400 text-center text-sm font-light tracking-wide hover:border-white hover:text-white transition-all duration-300 flex items-center justify-center gap-2 min-w-[100px]">
+                          <Github size={16} className="transition-transform group-hover/btn:scale-110" />
+                          <span>Code</span>
+                        </div>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
